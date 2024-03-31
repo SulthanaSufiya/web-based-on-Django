@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login page</title>
+    <link rel="stylesheet" type="text/css" href="{%static 'style.css' %}">
+</head>
+<body>
+<form id="login_form" action="{%url 'login' %}">
+        <h1>Voter Login</h1>
+        <input type="email" placeholder="Email" required="">
+        <input type="password" placeholder="Enter your password" required="">                 
+        <input id="login_button" type="submit" value="Login"></input> <br><br>
+        <a href= "{% url 'forgotpassword' %}">Forgot password?</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <a href= "{% url 'signup' %}">Create account</a>
+    </form>
+</body>
+</html>
